@@ -143,6 +143,15 @@
             </div>
         </div>
         @endif
+
+        @if (Route::currentRouteName() == 'contact')
+            <div id="page-meta">
+                <div class="inner group">
+                    <h3>...Say Hello! :)</h3>
+                    <h4>Get in touch with Pink Rio team</h4>
+                </div>
+            </div>
+        @endif
         <!-- END PAGE META -->
 
         <!-- START PRIMARY -->

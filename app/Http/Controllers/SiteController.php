@@ -68,30 +68,24 @@ class SiteController extends Controller
     }
 
 
-    protected function getMenu() {
+    public function getMenu() {
 
         $menu = $this->m_rep->get();
-//        dd($menu);
         $m_builder = Menu::make('MyNav', function ($m) use ($menu) {
 
             foreach ($menu as $item) {
-//                dump($m->find($item->parent));
 
                 if ($item->parent_id == NULL) {
-//                    dump($item->title);
                     $m->add($item->title, $item->path)->id($item->id);
                 }
                 else {
-
-//                    $m->item($item)
                     if ($m->find($item->parent_id)) {
-//                        dump($item);
                         $m->find($item->parent_id)->add($item->title, $item->path)->id($item->id);
                     }
                 }
             }
         });
-//        dump($m_builder);
+
         return $m_builder;
     }
 

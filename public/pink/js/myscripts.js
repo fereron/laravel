@@ -81,7 +81,7 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
 
         $('.wrap_result').css('height', '20px');
-        $('.wrap_result').css('color', 'green').text('Отправка формы').fadeIn(500, function () {
+        $('.wrap_result').css('color', 'green').text('Отправка сообщения').fadeIn(500, function () {
 
             var data = $('#contact-form-contact-us').serializeArray();
 
@@ -97,7 +97,7 @@ jQuery(document).ready(function ($) {
                         $('.wrap_result').delay(3000).fadeOut(500);
                     }
                     else if(html.success) {
-                        $('.wrap_result').text('Форма успешно отправлена');
+                        $('.wrap_result').text('Сообщение успешно отправлено');
                         $('.wrap_result').delay(1000).fadeOut(500);
                     }
                 }

@@ -45,6 +45,20 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+
+        if ($this->isHttpException($exception)) {
+            $statusCode = $exception->getStatusCode();
+
+            switch ($statusCode) {
+                case '404':
+                    $obj = new \App\Http\Controllers\SiteController(new \App\Repositories\MenuRepository(new \App\Menu));
+                    $navigation = view(env('THEME').'.navigation')->with('menu', $obj->getMenu())->render();
+                    $footer = view(env('THEME'). '.footer')->render();
+
+                return response()->view(env('THEME'). '.errors.404', ['title' => 'Страница не найдена', 'navigation' =>$navigation, 'footer' => $footer]);
+            }
+
+        }
         return parent::render($request, $exception);
     }
 
