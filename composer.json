@@ -8,6 +8,7 @@
         "php": ">=5.6.4",
         "barryvdh/laravel-debugbar": "^2.3",
         "barryvdh/laravel-ide-helper": "^2.3",
+        "doctrine/dbal": "^2.5",
         "graham-campbell/exceptions": "^9.0",
         "laravel/framework": "5.3.*",
         "laravelrus/sleepingowl": "4.*@dev",

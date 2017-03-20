@@ -33,6 +33,10 @@ class SiteController extends Controller
     {
         $this->m_rep = $m_rep;
     }
+
+    /**
+     * @return $this
+     */
     protected function renderOutput() {
 
         $menu = $this->getMenu();
@@ -68,6 +72,9 @@ class SiteController extends Controller
     }
 
 
+    /**
+     * @return mixed
+     */
     public function getMenu() {
 
         $menu = $this->m_rep->get();
@@ -89,6 +96,9 @@ class SiteController extends Controller
         return $m_builder;
     }
 
+    /**
+     * @return mixed
+     */
     protected function getSliders() {
 
         $sliders = $this->s_rep->get();

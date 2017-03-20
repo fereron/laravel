@@ -90,9 +90,9 @@ class Comments extends Section implements Initializable
 
             $tabs[] = AdminDisplay::tab($main, 'Main')->setActive();
 
-            $tree = AdminDisplay::tree()->setValue('text');
+//            $tree = AdminDisplay::tree()->setValue('text');
 
-            $tabs[] = AdminDisplay::tab($tree, 'Comments');
+//            $tabs[] = AdminDisplay::tab($tree, 'Comments');
 
             return $tabs;
         });

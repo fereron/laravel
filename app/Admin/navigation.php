@@ -3,9 +3,9 @@
 use SleepingOwl\Admin\Navigation\Page;
 
 // Default check access logic
-// AdminNavigation::setAccessLogic(function(Page $page) {
-// 	   return auth()->user()->isSuperAdmin();
-// });
+ AdminNavigation::setAccessLogic(function(Page $page) {
+ 	   return auth()->user()->isAdmin();
+ });
 //
 // AdminNavigation::addPage(\App\User::class)->setTitle('test')->setPages(function(Page $page) {
 // 	  $page

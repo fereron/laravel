@@ -21,7 +21,6 @@ Route::get('/login', ['uses' => 'Auth\LoginController@showLoginForm']);
 Route::post('/login', ['uses' => 'Auth\LoginController@login']);
 Route::post('/logout', ['uses' => 'Auth\LoginController@logout']);
 
-
 Route::get('/', ['uses' => 'IndexController@index', 'as' => 'home']);
 
 Route::get('/portfolios', ['uses' => 'PortfoliosController@show', 'as' => 'portfolios']);

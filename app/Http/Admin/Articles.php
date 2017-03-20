@@ -59,9 +59,9 @@ class Articles extends Section implements Initializable
         $display = AdminDisplay::datatablesAsync()
             ->setColumns([
             AdminColumn::link('title', 'Title'),
-            AdminColumn::custom('Author', function(Article $article) {
-                return $article->user->name;
-            })->setWidth('150px'),
+//            AdminColumn::custom('Author', function(Article $article) {
+//                return $article->user->name;
+//            })->setWidth('150px'),
             AdminColumn::datetime('created_at', 'Created')->setFormat('d.m.Y')->setWidth('150px'),
         ])->paginate(5);
 

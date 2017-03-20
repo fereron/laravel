@@ -11,6 +11,11 @@ class BLogController extends SiteController
 {
     //
 
+    /**
+     * BLogController constructor.
+     * @param ArticlesRepository $a_rep
+     * @param CommentsReposytory $c_rep
+     */
     public function __construct(ArticlesRepository $a_rep, CommentsReposytory $c_rep) {
 
         $this->a_rep = $a_rep;
@@ -25,7 +30,10 @@ class BLogController extends SiteController
 
     }
 
-
+    /**
+     * @param bool $cat_alias
+     * @return $this
+     */
     public function show($cat_alias = FALSE)
     {
 

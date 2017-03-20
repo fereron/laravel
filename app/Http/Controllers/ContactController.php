@@ -20,6 +20,7 @@ class ContactController extends SiteController
         $this->title = 'Контакты';
         $this->contactBar = TRUE;
 
+
     }
 
     public function show() {
